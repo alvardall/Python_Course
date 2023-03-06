@@ -1,0 +1,5 @@
+print("What is python")
+print("The history of python. Python was created by Guido van Rossum, and first released on February 20, 1991. While we may know the python as a large snake, the name of the Python programming language comes from an old BBC television comedy sketch series called Monty Python's Flying Circus.")
+print("Python modes. Python has two basic modes: script and interactive. The normal mode is the mode where the scripted and finished . py files are run in the Python interpreter. Interactive mode is a command line shell which gives immediate feedback for each statement, while running previously fed statements in active memory.")
+print("Python and Visual Studio Code Setup.")
+print("Running Python in VS Code")
