@@ -1,3 +1,4 @@
+
 '''
 For this challenge, you are supposed to find the sum of the digits of a two-digit number.
 45 ➞ 9
@@ -5,18 +6,11 @@ For this challenge, you are supposed to find the sum of the digits of a two-digi
 67 ➞ 13
 '''
 
-n = xy = 45 
-x = 4
-y = 5
-print(x + y)
-n = xy = 38
-x = 3
-y = 8
-print(x +y)
-n = xy = 67
-x = 6
-y = 7
-print(x + y)
+x = 45
+y = x //10 + x % 10
+
+print(y)
+
 
 
 '''
@@ -26,9 +20,10 @@ A repdigit is a positive number composed out of the same digit. Create a functio
 -44 ➞ False
 '''
 
-x = 44
-x > 0
-print((x % 11) == 0)
+x = 97
+y = x // 10 == x % 10
+
+print(y)
 
 
 '''
@@ -90,7 +85,24 @@ print(y)
 Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers
 '''
 
-x = 8
-y = (x % 2) == 0 == input('even')
-y = (x % 2) > 0 == input('odd')
+x = -8
+y = x % 2 
+
+print_text = "zuyg" * (y == 0) + "kent" * y
+print(print_text)
+
+"""
+x = 1960
+y = (2023-x)//4
+
+z = ((2023-x)* 365)+ y
+print(z)
+x = 72
+y = x // 10 + x % 10
+
 print(y)
+"""
+x = 1940
+y = 2023 - x
+
+print((y>= 20 and y <= 30) * "vayelir" + (y>= 30 and y <= 40) * "ush e" + (y>= 40 and y <= 90) * "gna heto kgas")
