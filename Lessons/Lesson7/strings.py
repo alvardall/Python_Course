@@ -119,11 +119,14 @@ Examples
 '''
 
 def is_isogram(s):
-    s = s.lower()
-    return len(set(s)) == len(s)
+ s = s.lower()
+ return len(set(s)) == len(s)
 print(is_isogram("PasSword"))
 
-
+txt = input("Enter  anything")
+result = txt.count("a") + txt.count("e")+txt.count("i") + \
+    txt.count("o")+txt.count("u")
+print(result)
 
 
 
