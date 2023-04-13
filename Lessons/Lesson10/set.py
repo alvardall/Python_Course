@@ -8,17 +8,16 @@ sum_common([1, 2, 2, 3], [5, 3, 2, 2], [7, 3, 2, 2]) ➞ 7
 sum_common([1], [1], [2]) ➞ 0 '''
 
 
-def intersection(lst1, lst2, lst3):
- 
-    y = set(lst2)
-    z = set(lst3)
-    common = [value for value in lst1 if value in y if value in z]
-    return common
+lst1 = [1, 2, 2, 3, ]
+lst2 = [5, 3, 2, 2]
+lst3 = [7, 3, 2, 2]
 
-lst1 = [1]
-lst2 = [1]
-lst3 = [2]
-print(sum(intersection(lst1, lst2, lst3)))
+x = (lst1, lst2, lst3)
+y = set(lst2)
+z = set(lst3)
+common = [value for value in lst1 if value in y if value in z]
+
+print(sum(common))
 
 '''EXTRA Knowledge
 2. Write a function that takes a list of numbers and returns a list with two elements:
@@ -32,8 +31,9 @@ Example
 Notes
 Count 0 as an even number. '''
 
-myList = [-1, -2, -3, -4, -5, -6] 
-print(sum(num for num in myList if not num%2),sum(num for num in myList if num%2))
+myList = [-1, -2, -3, -4, -5, -6]
+print(sum(num for num in myList if not num %
+      2), sum(num for num in myList if num % 2))
 
 '''3.Create a function that takes a dictionary of objects like { "name": "John", "notes": [3, 5, 4] } and returns a dictionary of objects like { "name": "John", "top_note": 5 }.
 Examples
@@ -41,7 +41,7 @@ top_note({ "name": "John", "notes": [3, 5, 4] }) ➞ { "name": "John", "top_note
 top_note({ "name": "Max", "notes": [1, 4, 6] }) ➞ { "name": "Max", "top_note": 6 }
 top_note({ "name": "Zygmund", "notes": [1, 2, 3] }) ➞ { "name": "Zygmund", "top_note": 3 }'''
 
-dict ={ "name": "Max", "notes": [1, 4, 6] }
+dict = {"name": "Max", "notes": [1, 4, 6]}
 x = list(dict["notes"])
 dict["notes"] = max(x)
 dict["top_note"] = dict.pop("notes")
@@ -65,12 +65,12 @@ profit({
   "inventory": 8500
 }) ➞ 44030'''
 
-profit ={
-  "cost_price": 2.77,
-  "sell_price": 7.95,
-  "inventory": 8500
-} 
-print((profit['sell_price'] - profit['cost_price'])*profit["inventory"])
+profit = {
+    "cost_price": 32.67,
+    "sell_price": 45.00,
+    "inventory": 1200
+}
+print(round((profit['sell_price'] - profit['cost_price'])*profit["inventory"]))
 
 '''6. A number is said to be Harshad if it's exactly divisible by the sum of its digits. Create a function that determines whether a number is a Harshad or not.
 Examples
@@ -89,7 +89,7 @@ is_harshad(200) ➞ True'''
 
 number = 200
 y = (sum(map(int, str(number))))
-print((number%y==0))
+print((number % y == 0))
 
 '''EXTRA Knowledge
 7. Given an input string, reverse the string word by word.
@@ -109,7 +109,7 @@ for word in words:
     string.insert(0, word)
 print(" ".join(string))
 
-#or
+# or
 s = "the sky is blue"
 y = s.split()[::-1]
 print(y)
@@ -120,8 +120,8 @@ word_builder(["e", "t", "s", "t"], [3, 0, 2, 1]) ➞ "test"
 word_builder(["b", "e", "t", "i", "d", "a"], [1, 4, 5, 0, 3, 2]) ➞ "edabit"'''
 
 
-x = ["b", "e", "t", "i", "d", "a"]
-y =  [1, 4, 5, 0, 3, 2]
+x, y = ["b", "e", "t", "i", "d", "a"], [1, 4, 5, 0, 3, 2]
+
 x = map(x.__getitem__, y)
 word = ''.join(x)
 print(word)
@@ -141,7 +141,7 @@ Notes
 Empty strings should return False when tested.'''
 
 x = " 4983"
-y= (len(x)== 4 or len(x) == 6) and  x.isdigit()
+y = (len(x) == 4 or len(x) == 6) and x.isdigit()
 print(y)
 
 '''10. Return a new set of identical items from two sets
@@ -166,7 +166,7 @@ Expected output:
 
 set1 = {10, 20, 30, 40, 50}
 set2 = {30, 40, 50, 60, 70}
-print(set1.union( set2))
+print(set1.union(set2))
 
 '''12. Given two Python sets, write a Python program to update the first set with items that exist only in the first set and not in the second set.
 Given:
@@ -193,11 +193,3 @@ Try to solve this in linear time.'''
 s = "the sky is blue"
 reverse_s = s[::-1]
 print(reverse_s)
-
-
- 
-
-
-
-
- 

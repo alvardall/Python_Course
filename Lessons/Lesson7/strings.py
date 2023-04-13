@@ -123,14 +123,5 @@ def is_isogram(s):
  return len(set(s)) == len(s)
 print(is_isogram("PasSword"))
 
-txt = input("Enter  anything")
-result = txt.count("a") + txt.count("e")+txt.count("i") + \
-    txt.count("o")+txt.count("u")
-print(result)
-
-
-
-
-
 
 
