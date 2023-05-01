@@ -14,7 +14,6 @@ x = "Hello, my Love!"
 print(x * (name == "Mubashir") + y * (name != 'Mubashir'))
 
 
-
 '''2.Create a function that takes two arguments. Both arguments are integers, a and b. 
  Return True if one of them is 10 or if their sum is 10.
 Examples
@@ -48,11 +47,11 @@ Examples
 "hello", "edabit" ➞ False'''
 
 x, y = ("hello", "edabit")
-print(len(x)== len(y))
+print(len(x) == len(y))
 
 '''5.Given a string, return True if its length is even or False if the length is odd.'''
 x = 'python'
-print(len(x)%2 == 0)
+print(len(x) % 2 == 0)
 
 '''6. Create a function that takes a string txt and a number n and returns the repeated string n number of times.
 If given argument txt is not a string, return Not A String !!
@@ -62,7 +61,6 @@ Examples
 1990, 7 ➞ "Not A String !!"'''
 
 txt, n = "Mubashir", 2
-y = type(txt)== str
-z = type(txt)==int
-print((y *(txt*n)) + "Not A String !!"*( z))
-
+y = type(txt) == str
+z = type(txt) == int
+print((y * (txt*n)) + "Not A String !!"*(z))

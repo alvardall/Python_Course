@@ -7,11 +7,11 @@ Notes
 Return 0 if given an empty array.
 All array items are of the type bool (true or false).'''
 
-def countTrue(lst):
-    return sum(bool(x) for x in lst)
+def countTrue(lst1):
+    return sum(bool(x) for x in lst1)
  
-lst = ([True, False, False, True, False])
-print(countTrue(lst))
+
+print(countTrue([True, False, False, True, False]))
 
 '''2. Create a function that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
 Examples
@@ -164,11 +164,11 @@ firstPlace("proeNeoOJGnfl") ➞ "l"
 Notes
 Return "No car available" if there is no car on the road and "No road available" if there is no road.'''
 
-def firstPlace(str):
+def firstPlace(s):
     if not str:
         return "No road available"
     cars = []
-    for i in str:
+    for i in s:
         if i != '=':
             cars.append(i)
     if not cars:

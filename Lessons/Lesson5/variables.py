@@ -7,10 +7,9 @@
 '''
 
 x = 38
-y = x //10 + x % 10
+y = x // 10 + x % 10
 
 print(y)
-
 
 
 '''Need extra knowledge!!
@@ -50,7 +49,6 @@ y = x * 365
 print(y)
 
 
-
 '''
 5.Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them.
 1,3 ➞ 3780
@@ -67,7 +65,7 @@ print(seconds)
 '''
 6. Create a function that accepts a measurement value in inches and returns the equivalent of the measureme
 '''
-x =15
+x = 15
 y = x * 12
 print(y)
 
@@ -77,16 +75,15 @@ print(y)
 '''
 
 x = 5
-y = x % 2 
+y = x % 2
 
-print_text = (y == 0) * "zuyg"  + y * "kent" 
+print_text = (y == 0) * "zuyg" + y * "kent"
 print(print_text)
 
 
 x = 1960
 y = (2023-x)//4
-
-z = ((2023-x)* 365)+ y
+z = ((2023-x) * 365) + y
 print(z)
 
 print(y)
@@ -94,6 +91,5 @@ print(y)
 x = 1940
 y = 2023 - x
 
-print((y>= 20 and y <= 30) * "vayelir" + (y>= 30 and y <= 40) * "ush e" + (y>= 40 and y <= 90) * "gna heto kgas")
-
-
+print((y >= 20 and y <= 30) * "vayelir" + (y >= 30 and y <= 40)
+      * "ush e" + (y >= 40 and y <= 90) * "gna heto kgas")

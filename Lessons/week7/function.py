@@ -107,7 +107,7 @@ def split(string):
     return (str1 +str2)
 
 print(split("abcde"))
-
+'''7. Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.'''
 '''def hacker_speak(txt):
 	dict = {"a":4, "e":3, "i":1, "o":0,"s":5}
 	str1 = ""
@@ -179,9 +179,9 @@ def reverse_complement(RNA):
     return new_pair
 print(reverse_complement("UCUCG"))
 
-a, b, c = (27, 27, 31)
+'''Imagine you have three numbers: a, b and c. c is equal to either a or b, but you dont know which one. Your task is to create a function that returns whatever number c is not out of a and b. So, if c is equal to a return b and if c is equal to b, return a.'''
 
-
+a, b, c = (27, 31, 31)
 print((c == b) * a + (c == a) * b)
 
 
