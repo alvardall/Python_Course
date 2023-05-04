@@ -1,31 +1,21 @@
 
 # 1 string medium
 
-
-
 def int_to_str(i):
     return str(i)
-
-
 print(int_to_str(29348))
-
 
 def str_to_int(s):
     return int(s)
-
-
 print(str_to_int('4'))
 
 # 2
 
-
 def string_int(txt):
     return int(txt)
-
-
 print(string_int("1000"))
-# 3
 
+# 3
 
 def how_many_seconds(hours):
     seconds = hours * 3600
@@ -40,13 +30,9 @@ print(how_many_seconds(24))
 def next_edge(side1, side2):
     edge = (side1 + side2) - 1
     return edge
-
-
 print(next_edge(8, 10))
 
 # 1 string hard
-
-
 def arithmetic_operation(equation):
     first_num, operation, second_num = equation.split()
     if operation == '+':

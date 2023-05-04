@@ -1,3 +1,4 @@
+
 '''1. Create a function to perform basic arithmetic operations that includes addition, subtraction, multiplication and division on a string number (e.g. "12 + 24" or "23 - 21" or "12 // 12" or "12 * 21").
 Here, we have 1 followed by a space, operator followed by another space and 2. For the challenge, we are going to have only two numbers between 1 valid operator. The return value should be a number.'''
 
@@ -32,21 +33,7 @@ def Disarium(num):
     return sum== number
 print(Disarium(8))
 
-#3 
-'''def check_score(s):
-    lst1 = []
-    for x in s:
-        for a in x:
-            if "#" in a:
-                lst1+= 5
-            if "0" in a:
-                lst1+=3
-                return lst1
-print(check_score([
-  ["#", "!"],
-  ["!!", "X"]
-]))'''
- 
+
 
 '''4 Create a function that takes a string's characters as ASCII and returns each character's hexadecimal value as a string.'''
 
@@ -57,6 +44,7 @@ print(convert_to_hex("Big Boi"))
 
 '''5 Someone has attempted to censor my strings by replacing every vowel with a *, l*k* th*s. Luckily, I've been able to find the vowels that were removed.
 Given a censored string and a string of the censored vowels, return the original uncensored string.'''
+
 
 def uncensor(txt, vowels):
     for i in range(txt.count('*')):
@@ -73,14 +61,17 @@ print(tidy_link("https://www.google.com", "Google", "Google Search"))
 
 
 '''7 Given a list of words in the singular form, return a set of those words in the plural form if they appear more than once in the list.'''   
+
 import collections
 def pluralize(lst):
+    x = set()
     dict = collections.Counter(lst)
     for key in dict:
         if dict[key]>1:
-            return {key + 's'}
+           x.add(key + 's')
         if dict[key]==1:
-            return {key}
+           x.add(key)
+    return x 
           
 print(pluralize(["cow", "pig", "cow", "cow"]))
 
@@ -102,3 +93,17 @@ def censor_string(txt, lst, char):
 
     return " ".join(word_list)
 print(censor_string("Today is a Wednesday!", ["Today", "a"], "-"))
+
+'''Generate a random float number'''
+
+import random
+def randfloat(start:float, end:float):
+    return random.uniform(start, end)
+start = 11.5
+end = 83.5
+print(randfloat(start, end))
+
+def relation_to_luke(name):
+    d = { 'Darth Vader' :	'father', 'Leia' : 'sister', 'Han'	: 'brother in law', 'R2D2'	: 'droid'}
+    return "Luke, I am your " + d[name]
+print(relation_to_luke('Han'))
