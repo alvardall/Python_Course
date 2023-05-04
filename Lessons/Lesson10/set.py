@@ -193,3 +193,5 @@ Try to solve this in linear time.'''
 s = "the sky is blue"
 reverse_s = s[::-1]
 print(reverse_s)
+
+

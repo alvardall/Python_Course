@@ -103,7 +103,4 @@ start = 11.5
 end = 83.5
 print(randfloat(start, end))
 
-def relation_to_luke(name):
-    d = { 'Darth Vader' :	'father', 'Leia' : 'sister', 'Han'	: 'brother in law', 'R2D2'	: 'droid'}
-    return "Luke, I am your " + d[name]
-print(relation_to_luke('Han'))
+

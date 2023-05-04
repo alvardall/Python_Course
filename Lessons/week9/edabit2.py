@@ -104,3 +104,12 @@ def censor_string(txt, lst, char):
 
     return " ".join(word_list)
 print(censor_string("Today is a Wednesday!", ["Today", "a"], "-"))
+
+'''Generate a random float number'''
+
+import random
+def randfloat(start:float, end:float):
+    return random.uniform(start, end)
+start = 11.5
+end = 83.5
+print(randfloat(start, end))
