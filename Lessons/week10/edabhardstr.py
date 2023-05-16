@@ -35,8 +35,8 @@ def secret(txt):
         if i == 'p':
             y += "'<p class='"
         if i != 'p':
-            y += i + " "
-    return y[:-1] + "'></p>'"
+            y += i + ' '
+    return y.rstrip() + "'></p>'"
 print(secret("p.four.five"))
 
 
@@ -67,4 +67,34 @@ def loves_me(n):
     else:
         return a+', '+'LOVES ME'
 print(loves_me(3))
+
+"""
+Desc : This function generates a float range of numbers w/o using any library.
+
+Params :
+A (int/float) : First number in the range
+L (int/float) : Last number in the range
+D (int/float) : Step or the common difference
+"""
+def float_range(A, L=None, D=None):
+    #Use float number in range() function
+    # if L and D argument is null set A=0.0 and D = 1.0
+    if L == None:
+        L = A + 0.0
+        A = 0.0
+    if D == None:
+        D = 1.0
+    while True:
+        if D > 0 and A >= L:
+            break
+        elif D < 0 and A <= L:
+            break
+        yield ("%g" % A) # return float number
+        A = A + D
+print ("\nPrinting float range")
+print ("\nTest 1: ", end = " ")
+for i in float_range(5.7, 9.2, 0.5):
+    print (i, end=", ")
+#end of function float_range()
+
 

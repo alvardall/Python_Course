@@ -32,20 +32,16 @@ def Disarium(num):
     return sum== number
 print(Disarium(8))
 
-#3 
-'''def check_score(s):
-    lst1 = []
-    for x in s:
-        for a in x:
-            if "#" in a:
-                lst1+= 5
-            if "0" in a:
-                lst1+=3
-                return lst1
+'''3 Write a function that takes a list of lists and returns the value of all of the symbols in it, where each symbol adds or takes something from the total score. Symbol values:'''
+d = {'#' : 5, 'O' : 3, 'X' : 1, '!' : -1, '!!' : -3, '!!!' : -5}
+def check_score(s):
+   
+    return sum([d[a] for x in s for a in x ])
+                
 print(check_score([
   ["#", "!"],
   ["!!", "X"]
-]))'''
+]))
  
 
 '''4 Create a function that takes a string's characters as ASCII and returns each character's hexadecimal value as a string.'''
