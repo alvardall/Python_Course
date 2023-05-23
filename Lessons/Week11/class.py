@@ -23,8 +23,8 @@ class ones_threes_nines:
 		self.ones = n
 		self.threes = n // 3
 		self.nines = n // 9
-n1 = ones_threes_nines(5)
-print(n1.ones)  
+n1 = ones_threes_nines(15)
+print(n1.nines)  
 
 #3
 class Player():
@@ -151,5 +151,6 @@ andorra = Country("Andorra", 76098, 468)
 print(australia.is_big)
 print(andorra.is_big)
 print(andorra.compare_pd(australia))
-
+var= "James Bond"
+print(var[2::-1])
         
