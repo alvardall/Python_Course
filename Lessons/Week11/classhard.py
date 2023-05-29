@@ -75,26 +75,44 @@ print(emp2.firstname)
 print(emp2.salary)
 
 #5 People Sort
-'''class Person:
-    def __init__(self, firstname, lastname, age):
-        self.firstname = firstname
-        self.lastname = lastname
-        self.age =age
-    def people_sort(self,lst, attr):
-        if attr == 'firstname':
-            return sorted(lst, key=self.firstname)
-        elif attr == "lastname":
-            return sorted(lst, key=self.lastname)
-        else:
-            return sorted(lst, key=self.age)
+class Person:
+    def __repr__(self):
+            return '({})'.format(self.lastname)
 
+def people_sort(lst, attr):
+	if attr == 'firstname':
+		result = sorted(lst, key=lambda x: x.firstname)
+	elif attr == 'lastname':
+		result = sorted(lst, key=lambda x: x.lastname)
+	else:
+		result = sorted(lst, key=lambda x: x.age)
+	return result
 p1 = Person("Michael", "Smith", 40)
 p2 = Person("Alice", "Waters", 21)
 p3 = Person("Zoey", "Jones", 29)
 
 print(people_sort([p1, p2, p3], "firstname"))
-print(people_sort([p1, p2, p3], "lastname"))
-print(people_sort([p1, p2, p3], "age"))'''
+
+
+#6
+class Memories:
+    def __init__(self):
+        self.baza = dict()
+    def add(self, **kwargs):
+        self.baza.update(kwargs)
+    def remember(self, reqall):
+        if reqall in self.baza:
+            return self.baza[reqall]
+        return False
+memories = Memories()
+memories.add(name="Shane", gender="M", catch_phrase="bazinga")
+memories.add(work="None", love_life=0)
+memories.add(adress="car")
+
+print(memories.remember("catch_phrase"))
+print(memories.remember("gender"))
+print(memories.remember("adress"))
+
 
 #7 Shiritori Game
 class Shiritori:
@@ -120,6 +138,19 @@ print(my_shiritori.words)
 print(my_shiritori.restart())
 print(my_shiritori.words)
 
-
-
+#8
+class Employee:
+    
+    def __init__(self, full_name, **kwargs):
+        self.full_name = full_name
+        self.name, self.lastname = full_name.split()
+        self.__dict__.update(kwargs)
+john = Employee("John Doe")
+mary = Employee("Mary Major", salary=120000)
+richard = Employee("Richard Roe", salary=110000, height=178)
+giancarlo = Employee("Giancarlo Rossi", salary=115000, height=182, nationality="Italian")
+print(john.name)
+print(mary.lastname)
+print(richard.height)
+print(giancarlo.nationality)
     
