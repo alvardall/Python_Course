@@ -25,12 +25,23 @@ print(lst2)
 #6.  Return product of integer lists
 from functools import reduce
 list1 = [5, 7, 3, 2]
-
- 
- 
 result = reduce((lambda x, y: x * y), list1)
-
 print(result)
+
+
+def is_tie(cells):
+        
+        x = []
+        for cell in cells:
+        if cell == " ":
+
+                x.append(cells.index(cell)+1)
+        return  x
+       
+            
+      
+        
+print(is_tie( [" ", "X", "m", " ", " ", "o", " ", " ", " ", " "]))
 
 
 

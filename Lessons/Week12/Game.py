@@ -1,39 +1,59 @@
-#decorator that returns the time of the function
-from time import time
+from Board import Board_class
+from Player import Player
+from Player import HumanPlayer
+from Player import ComputerPlayer
 
-def timer_func(func):
-    def wrap_func(*args, **kwargs):
-        t1 = time()
-        result = func(*args, **kwargs)
-        t2 = time()
-        print(f'Function  executed in {(t2-t1)}s')
-        return result
-    return wrap_func
+class Game:
+    def __init__(self):
+        self.board = Board_class()
+        self.human = HumanPlayer('X', self.board)
+        self.computer = ComputerPlayer('O', self.board)
+    
+    def play(self):
+        
+        while True:
+            self.human.move()
+            self.board.display()
+            if self.check_status(self.human):
+                break
+            self.computer.move()
+            self.board.display()
+            if self.check_status(self.computer):
+                break
+    
+                
+        
+    def check_status(self, player:Player):
+        cells = self.board.cells
+        for i in range(3):
+            if cells[i+1] == player.value and cells[i+4] == player.value and cells[i+7] == player.value: 
+                print( "It's over! Player " + player.value + " wins!")
+                return True
+            elif cells[(i*3)+1] == player.value and cells[(i*3) + 2] == player.value and cells[(i*3) + 3] == player.value: 
+                print( "It's over! Player " + player.value + " wins!")
+                return True
 
-@timer_func
-def long_time(n):
-    for i in range(n):
-        for j in range(100000):
-            i*j
-long_time(5)
-#Game Tic tak toe
-def board(self):
-    print("")
-    for i in range(0, 3):
-        print("-------------")
-        out = "| "
-        for j in range(0, 3):
-            if self.board[i, j] == 1:
-                token = "X"
-            if self.board[i, j] == -1:
-                token = "0"
-            if self.board[i, j] == 0:
-                token = " "
-            out += token + " | "
-        print(out)
-    print("-------------")
+            if cells[1] == player.value and cells[5] == player.value and cells[9] == player.value:
+                print( "It's over! Player " + player.value + " wins!")
+                return True
+            elif cells[3] == player.value and cells[5] == player.value and cells[7] == player.value:
+                print( "It's over! Player " + player.value + " wins!")
+                return True
+        
+    
+            
+        if len(self.board.free_cell())==0:
+            print("It's draw")
+            return True
+        return False
 
 
 
+if __name__== '__main__':
+    game = Game()
+    game.play()
+ 
+   
+   
 
-
+            
